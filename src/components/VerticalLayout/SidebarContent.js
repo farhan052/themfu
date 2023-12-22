@@ -156,7 +156,7 @@ const SidebarContent = props => {
                   <Link to="/dashboard">{props.t("Default")}</Link>
                 </li>
                 <li>
-                  <Link to="#">{props.t("Saas")}</Link>
+                  <Link to="/participator">{props.t("participatoraas")}</Link>
                 </li>
                 <li>
                   <Link to="#">{props.t("Crypto")}</Link>
@@ -174,30 +174,20 @@ const SidebarContent = props => {
 
             <li className="menu-title">{props.t("Apps")}</li>
 
-            <li>
-              <Link to="#" >
-                <i className="bx bx-calendar"></i>
-                <span>{props.t("Calendar")}</span>
-              </Link>
-            </li>
+           
 
+            
             <li>
-              <Link to="#" >
-                <i className="bx bx-chat"></i>
-                <span>{props.t("Chat")}</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="#" >
+              <Link to="/Leaderboard" >
                 <i className="bx bx-file"></i>
-                <span>{props.t("File Manager")}</span>
+                <span>{props.t("Leaderboard")}</span>
               </Link>
             </li>
 
             <li>
-              <Link to="/#" className="has-arrow">
+              <Link to="/participator" className="has-arrow">
                 <i className="bx bx-store"></i>
-                <span>{props.t("Ecommerce")}</span>
+                <span>{props.t("Participator21")}</span>
               </Link>
               <ul className="sub-menu">
                 <li>
@@ -232,7 +222,7 @@ const SidebarContent = props => {
             </li>
 
             <li>
-              <Link to="/#" className="has-arrow ">
+              <Link to="/#" className="has-arrow">
                 <i className="bx bx-bitcoin"></i>
                 <span>{props.t("Crypto")}</span>
               </Link>
