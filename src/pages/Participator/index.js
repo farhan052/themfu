@@ -240,7 +240,7 @@ function index() {
                       </div>
                       <div className="modal-footer">
                         <button onClick={()=>setOpen(false)} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" className="btn btn-primary">ADD</button>
+                        <button type="button" className="btn btn-primary">+ ADD</button>
                       </div>
                   </Form>
                     </Modal>
