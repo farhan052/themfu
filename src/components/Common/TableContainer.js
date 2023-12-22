@@ -28,7 +28,7 @@ function GlobalFilter({
   return (
     <React.Fragment>
       <Col md={4}>
-        <div className="search-box me-xxl-2 my-3 my-xxl-0 d-inline-block">
+        <div className="search-box mx-3 me-xxl-2 my-xxl-0 d-inline-block">
           <div className="position-relative">
             <label htmlFor="search-bar-0" className="search-label">
               <span id="search-bar-0-label" className="sr-only">
@@ -125,7 +125,7 @@ const TableContainer = ({
 
   return (
     <Fragment>
-      <Row className="mb-2">
+      <Row className="mb-2 mt-3">
         {iscustomPageSizeOptions &&
           <Col md={customPageSizeOptions ? 2 : 1}>
             <select
