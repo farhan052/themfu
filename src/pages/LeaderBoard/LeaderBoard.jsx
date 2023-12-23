@@ -275,18 +275,22 @@ function LeaderBoard() {
     columns={columns}
     data={data}
     isGlobalFilter={true}
+    is
     // isAddOptions={true}
+    isShowingPageLength={1}
     isJobListGlobalFilter={true}
+    iscustomPageSizeOptions={1}
+    customPageSizeOptions={3}
     // isGlobalFilter={true}
     // handleOrderClicks={setAdd(!add)}
     customPageSize={10}
     isPagination={true}
     
     
-    tableClass="align-middle bg-transparent table-nowrap table-check table"
-    theadClass="bg-transparent"
-    paginationDiv="col-12"
-    pagination="justify-content-center bg-transparent pagination pagination-rounded"
+    tableClass="align-middle mx-2 text-center bg-transparent table-nowrap table-check table"
+    theadClass="bg-dark has-arrow"
+    paginationDiv="col-12 px-2 align-item-center"
+    pagination="justify-content-centerbg-dark pagination pagination-rounded"
 />
        
     </>

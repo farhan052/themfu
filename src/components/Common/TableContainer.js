@@ -27,10 +27,11 @@ function GlobalFilter({
 
   return (
     <React.Fragment>
-      <Col md={4}>
-        <div className="search-box mx-3 me-xxl-2 my-xxl-0 d-inline-block">
+      {isJobListGlobalFilter && <JobListGlobalFilter setGlobalFilter={setGlobalFilter} />}
+      <Col  className="px-0 " >
+        <div className="search-box  me-xxl-2 my-xxl-0  px-0 mx-sm-1 d-inline-block">
           <div className="position-relative">
-            <label htmlFor="search-bar-0" className="search-label">
+            <label htmlFor="search-bar-0 col-sm-12" className="search-label">
               <span id="search-bar-0-label" className="sr-only">
                 Search this table
               </span>
@@ -41,7 +42,7 @@ function GlobalFilter({
                 }}
                 id="search-bar-0"
                 type="text"
-                className="form-control"
+                className="form-control mx-0 col-sm-12"
                 placeholder={`${count} records...`}
                 value={value || ""}
               />
@@ -50,7 +51,6 @@ function GlobalFilter({
           </div>
         </div>
       </Col>
-      {isJobListGlobalFilter && <JobListGlobalFilter setGlobalFilter={setGlobalFilter} />}
     </React.Fragment>
   )
 }
@@ -125,9 +125,9 @@ const TableContainer = ({
 
   return (
     <Fragment>
-      <Row className="mb-2 mt-3">
+      <Row className="mb-2 mx-2  mt-3">
         {iscustomPageSizeOptions &&
-          <Col md={customPageSizeOptions ? 2 : 1}>
+          <Col md={customPageSizeOptions ? customPageSizeOptions : 1}>
             <select
               className="form-select"
               value={pageSize}
@@ -166,12 +166,12 @@ const TableContainer = ({
           </Col>
         )}
         {isAddUserList && (
-          <Col sm="7">
+          <Col sm={6} className="">
             <div className="text-sm-end">
               <Button
                 type="button"
                 color="primary"
-                className="btn mb-2 me-2"
+                className="btn mb-2 "
                 onClick={handleUserClick}
               >
                 <i className="mdi mdi-plus-circle-outline me-1" />
