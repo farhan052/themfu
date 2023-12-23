@@ -1,13 +1,57 @@
 
 import TableContainer from 'components/Common/TableContainer';
 import React, { useMemo, useState } from 'react'
-import { Card, Col,Modal, Button, Form, Label, Input , Row, Breadcrumb, Container} from 'reactstrap'
-
+import { Link } from 'react-router-dom';
+import { Card, Col,Modal, Button, Form, Label, Input , Row, Breadcrumb, Container, UncontrolledTooltip} from 'reactstrap'
+ import classnames from 'classnames'
 function index() {
   const [open, setOpen] = useState(false)
 
 
-  const action= (row)=><p>{row.index}</p>
+  const action= (row)=><>
+  <Row className='d-flex justify-content-center '>
+    <div><i className='bx bx-dots-horizontal-rounded'></i></div>
+
+
+    <Link
+                    to="/#"
+                    onClick={e => {
+                      e.preventDefault();
+                      setui(!ui);
+                    }}
+                    className="nav-link dropdown-toggle arrow-none"
+                  >
+                    <i className="bx bx-tone me-2"></i>
+                    {props.t("UI Elements")} <div className="arrow-down"></div>
+                  </Link>
+                  <div
+                    className={classname(
+                      "dropdown-menu mega-dropdown-menu dropdown-menu-left dropdown-mega-menu-xl",
+                      { show: ui }
+                    )}
+                  >
+                    <Row>
+                      <Col lg={4}>
+                        <div>
+                         
+                          <Link to="/ui-cards" className="dropdown-item">
+                            props.t"Cards"
+                          </Link>
+                          <Link to="/ui-carousel" className="dropdown-item">
+                            props.t"Carousel"
+                          </Link>
+                          
+                        </div>
+                      </Col>
+                     
+                    </Row>
+                  </div>
+   {/* <Button className='p-1 col-sm-3 ' color='info'><i className='bx font-size-16 bx-pencil'></i></Button>
+    <Button className='p-1 col-sm-3 mx-1' color='success'><i className="mdi font-size-16 mdi-eye-outline" /></Button>
+    <Button className='p-1 col-sm-3' color='danger'><i className="mdi font-size-16 m-0 mdi-delete-outline" /> </Button> */}
+  </Row>
+  
+  </>
 
 
     const columns = useMemo(
@@ -37,46 +81,110 @@ function index() {
                 Header: 'Action',
                 accessor: action
             },
+            // {
+            //   Header: 'Action',
+            //   accessor: 'action',
+            //   disableFilters: true,
+            //   Cell: (cellProps) => {
+            //       return (
+            //           <ul className="list-unstyled hstack gap-1 mb-0">
+            //               <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+            //               <Button 
+            //                       className="btn btn-sm btn-soft-primary"
+            //                       // id='{viewtooltip-${cellProps.row.original.id}}' //use param Hook  
+                                  
+            //                   >
+            //                       <i className="mdi mdi-eye-outline" />
+            //                   </Button>
+            //               </li>
+            //               <UncontrolledTooltip placement="top"
+            //               //  target='{viewtooltip-${cellProps.row.original.id}}'
+            //                >
+            //                   View
+            //               </UncontrolledTooltip>
+
+            //               <li>
+            //               <Button               
+            //                       className="btn btn-sm btn-soft-primary"
+            //                       // id='{edittooltip-${cellProps.row.original.id}}'
+            //                   >
+            //                       <i className="mdi mdi-pencil-outline" />
+            //                       <UncontrolledTooltip placement="top" 
+            //                       // target='{edittooltip-${cellProps.row.original.id}}'
+            //                        >
+            //                           Edit
+            //                       </UncontrolledTooltip>
+            //                   </Button>
+            //               </li>
+
+            //               <li>
+            //                   <Link
+            //                       to="#"
+            //                       className="btn btn-sm btn-soft-danger"
+            //                       // onClick={() => {
+            //                       //     const jobData = cellProps.row.original;
+            //                       //     onClickDelete(jobData);
+            //                       // }}
+            //                       // id='{deletetooltip-${cellProps.row.original.id}}'
+            //                   >
+            //                       <i className="mdi mdi-delete-outline" />
+            //                       <UncontrolledTooltip placement="top"
+            //                       //  target='{deletetooltip-${cellProps.row.original.id}}'
+            //                        >
+            //                           Delete
+            //                       </UncontrolledTooltip>
+            //                   </Link>
+            //               </li>
+            //           </ul>
+            //       );
+            //   }
+            // },
         ],
         []
     );
 
     const data = [
         {  
-            index:1,
-            firstName: "Jennifer Chang",
-            lastName: "Jennifer Chang",
+          id :1,
+          index:1,
+          firstName: "Jennifer Chang",
+          lastName: "Jennifer Chang",
+          email :'shwetank',
+            mobile :'88888888888',
+            action:'1'
+            
+        },
+        {  
+          id :1,
+          index:2,
+          firstName: "Jennifer Chang",
+          lastName: "Jennifer Chang",
             email :'shwetank',
             mobile :'88888888888'
             
         },
         {  
-            index:2,
-            firstName: "Jennifer Chang",
-            lastName: "Jennifer Chang",
-            email :'shwetank',
-            mobile :'88888888888'
+          id :1,
+          index:3,
+          firstName: "Jennifer Chang",
+          lastName: "Jennifer Chang",
+          email :'shwetank',
+          mobile :'88888888888'
             
         },
         {  
-            index:3,
-            firstName: "Jennifer Chang",
-            lastName: "Jennifer Chang",
+          id :1,
+          index:4,
+          firstName: "Jennifer Chang",
+          lastName: "Jennifer Chang",
             email :'shwetank',
             mobile :'88888888888'
             
-        },
-        {  
-            index:4,
-            firstName: "Jennifer Chang",
-            lastName: "Jennifer Chang",
-            email :'shwetank',
-            mobile :'88888888888'
-            
-        },
-        {  
-            index:5,
-            firstName: "Jennifer Chang",
+          },
+          {  
+          id :1,
+          index:5,
+          firstName: "Jennifer Chang",
             lastName: "Jennifer Chang",
             email :'shwetank',
             mobile :'88888888888'
@@ -91,8 +199,8 @@ function index() {
   
 
     function removeBodyCss() {
-        document.body.classList.add("no_padding");
-      }
+      document.body.classList.add("no_padding");
+    }
 
 
   return (
@@ -259,6 +367,7 @@ function index() {
         removeBodyCss()}
     }
     customPageSize={10}
+    customPageSizeOptions={3}
     isPagination={true}
     tableClass="align-middle text-center table-nowrap table-check table"
     theadClass=" alig-middle"
@@ -266,7 +375,8 @@ function index() {
     pagination="justify-content-center  bg-transparent pagination pagination-rounded"
 />
     </Card>
-    </Container></div>
+    </Container>
+    </div>
     </React.Fragment>
    </>
   )
