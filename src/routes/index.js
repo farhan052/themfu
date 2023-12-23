@@ -13,7 +13,7 @@ import ForgetPwd from "../pages/Authentication/ForgetPassword";
 // Dashboard
 import Dashboard from "../pages/Dashboard/index";
 import LeaderBoard from "pages/LeaderBoard";
-import Participator from "pages/Participator";
+import Participator from "pages/Participator/participator";
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: <Dashboard /> },
