@@ -14,6 +14,7 @@ import Footer from "./Footer/footer"
 import Partners from "./Partners"
 import why from "../../assets/images/crypto/features-img/why-zeb.svg";
 import whysay from "../../assets/images/crypto/features-img/what-say.svg";
+import award from "../../assets/images/crypto/features-img/awards-1.webp";
 const CryptoIcoLanding = () => {
   
   //meta title
@@ -67,7 +68,7 @@ const CryptoIcoLanding = () => {
 
 
       <OurTeam />
-      <AboutUs img={why}  heading='Awards and Recognition'/>
+      <AboutUs img={award}  heading='Awards and Recognition'/>
 
 
       {/* partener */}
