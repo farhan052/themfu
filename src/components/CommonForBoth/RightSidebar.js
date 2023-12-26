@@ -205,7 +205,7 @@ const RightSidebar = props => {
                   }}
                 />
                 <label className="me-1" htmlFor="radioThemeDark">Dark</label>
-                {props.layoutType === "vertical" ? null : (
+                {props.layoutType === "horizotal" ? null : (
                   <>
                     <input
                       type="radio"

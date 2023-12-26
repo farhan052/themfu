@@ -20,22 +20,22 @@ function index() {
     <React.Fragment>
       <TabContent activeTab={activeTab1} className="p-3 text-muted">
                <TabPane tabId="5">
-            <Row  className='m-auto text-center'>
+            <Row  className=' text-center'>
                 <TopPerformer  sports='Weight Lifting' />
             </Row>
           </TabPane>
                <TabPane tabId="6">
-            <Row  className='m-auto text-center'>
+            <Row  className=' text-center'>
                 <TopPerformer  sports='Running' />
             </Row>
           </TabPane>
                <TabPane tabId="7">
-            <Row  className='m-auto text-center'>
+            <Row  className=' text-center'>
                 <TopPerformer  sports='Push Ups' />
             </Row>
           </TabPane>
                <TabPane tabId="8">
-            <Row  className='m-auto text-center'>
+            <Row  className=' text-center'>
                 <TopPerformer  sports='Squats' />
             </Row>
           </TabPane>
@@ -43,7 +43,7 @@ function index() {
       {/* <div  className="page-content bg-default"> */}
       
        
-        <Container  >
+        {/* <Container  > */}
           {/* Render Breadcrumbs */}
           {/* <Breadcrumb title="fwgames" breadcrumbItem="hyposports" /> */}
           {/* <img alt='img' src='../../assets/images/crypto/bg-ico-hero.jpg'> */}
@@ -53,7 +53,7 @@ function index() {
            
             <h3><b>Leader Board</b></h3>
             
-      <div  className=" bg-default page-content">
+      <div  className=" bg-default mt-3">
         <Container fluid>
 
             <Nav pills className="navtab-bg bg-info mx-5 nav-justified">
@@ -166,7 +166,7 @@ function index() {
             
       
           {/* </Card> */}
-    </Container>
+    {/* </Container> */}
  
     {/* </div> */}
 
