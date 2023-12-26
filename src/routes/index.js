@@ -14,6 +14,7 @@ import ForgetPwd from "../pages/Authentication/ForgetPassword";
 import Dashboard from "../pages/Dashboard/index";
 import LeaderBoard from "pages/LeaderBoard";
 import Participator from "pages/Participator/participator";
+import CryptoIcoLanding from "pages/CryptoIcoLanding";
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: <Dashboard /> },
@@ -32,6 +33,7 @@ const publicRoutes = [
     exact: true,
     component: <Navigate to="/Leaderboard" />,
   },
+  { path: "/Landing", component: <CryptoIcoLanding /> },
   { path: "/login", component: <Login /> },
   { path: "/logout", component: <Logout /> },
   { path: "/forgot-password", component: <ForgetPwd /> },
