@@ -22,7 +22,7 @@ import logo from "assets/images/logo.svg";
 const Login = props => {
 
   //meta title
-  document.title = "Login | Skote - React Admin & Dashboard Template";
+  document.title = "Login | User - React Admin & Dashboard Template";
 
   const dispatch = useDispatch();
 
@@ -80,7 +80,7 @@ const Login = props => {
                   <Col className="col-7">
                       <div className="text-primary p-4">
                         <h5 className="text-primary">Welcome Back !</h5>
-                        <p>Sign in to continue to Skote.</p>
+                        <p>Sign in to continue to User.</p>
                       </div>
                     </Col>
                     <Col className="col-5 align-self-end">
@@ -244,10 +244,8 @@ const Login = props => {
                     Signup now{" "}
                   </Link>{" "}
                 </p>
-                <p>
-                  © {new Date().getFullYear()} Skote. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger" /> by Themesbrand
-                </p>
+              
+                
               </div>
             </Col>
           </Row>

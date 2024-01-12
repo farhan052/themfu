@@ -21,7 +21,7 @@ import logoImg from "../../assets/images/logo.svg";
 const Register = props => {
 
   //meta title
-  document.title = "Register | Skote - React Admin & Dashboard Template";
+  document.title = "Register | user - React Admin & Dashboard Template";
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -88,7 +88,7 @@ useEffect(() => {
                     <Col className="col-7">
                       <div className="text-primary p-4">
                         <h5 className="text-primary">Free Register</h5>
-                        <p>Get your free Skote account now.</p>
+                        <p>Get your free user account now.</p>
                       </div>
                     </Col>
                     <Col className="col-5 align-self-end">
@@ -196,7 +196,7 @@ useEffect(() => {
 
                       <div className="mt-4 text-center">
                         <p className="mb-0">
-                          By registering you agree to the Skote{" "}
+                          By registering you agree to the user{" "}
                           <Link to="#" className="text-primary">
                             Terms of Use
                           </Link>
@@ -214,10 +214,7 @@ useEffect(() => {
                     Login
                   </Link>{" "}
                 </p>
-                <p>
-                  © {new Date().getFullYear()} Skote. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger" /> by Themesbrand
-                </p>
+               
               </div>
             </Col>
           </Row>

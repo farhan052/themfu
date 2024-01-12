@@ -15,6 +15,7 @@ import Dashboard from "../pages/Dashboard/index";
 import LeaderBoard from "pages/LeaderBoard";
 import Participator from "pages/Participator/participator";
 import CryptoIcoLanding from "pages/CryptoIcoLanding";
+ 
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: <Dashboard /> },
@@ -31,7 +32,7 @@ const publicRoutes = [
   {
     path: "/",
     exact: true,
-    component: <Navigate to="/Leaderboard" />,
+    component: <Navigate to="login" />,
   },
   { path: "/Landing", component: <CryptoIcoLanding /> },
   { path: "/login", component: <Login /> },
