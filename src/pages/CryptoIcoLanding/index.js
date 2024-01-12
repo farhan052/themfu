@@ -1,24 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState , lazy } from "react";
 
 //Import Components
-import Navbar from "./Navbar/Navbar"
-import Section from "./HeroSection/Section"
-import CardsMini from "./HeroSection/cards-mini"
-import AboutUs from "./AboutUs/about-us"
-import Features from "./Features/features"
-import RoadMap from "./RoadMap/road-map"
-import OurTeam from "./Team/our-team"
-import Blog from "./Blog/blog"
-import FAQs from "./Faqs/FAQs"
-import Footer from "./Footer/footer"
-import Partners from "./Partners"
-import why from "../../assets/images/crypto/features-img/why-zeb.svg";
-import whysay from "../../assets/images/crypto/features-img/what-say.svg";
-import award from "../../assets/images/crypto/features-img/awards-1.webp";
+const Navbar =React.lazy(()=>delayForDemo(  import(  "./Navbar/Navbar")))
+
+const Section =    lazy(()=>delayForDemo( import(  "./HeroSection/Section")))
+const CardsMini =    lazy(()=>delayForDemo( import(  "./HeroSection/cards-mini")))
+const AboutUs =    lazy(()=>delayForDemo( import(  "./AboutUs/about-us")))
+const Features =    lazy(()=>delayForDemo(  import(  "./Features/features")))
+const RoadMap =    lazy(()=>delayForDemo( import(  "./RoadMap/road-map")))
+const OurTeam =    lazy(()=>delayForDemo( import(  "./Team/our-team")))
+const Blog =    lazy(()=>delayForDemo(  import(  "./Blog/blog")))
+const FAQs =    lazy(()=>delayForDemo(  import(  "./Faqs/FAQs")))
+const Footer =    lazy(()=>delayForDemo(  import(  "./Footer/footer")))
+const Partners =    lazy(()=>delayForDemo(  import(  "./Partners")))
+const why =    lazy(()=>delayForDemo( import(  "../../assets/images/crypto/features-img/why-zeb.svg")))
+const whysay =    lazy(()=>delayForDemo(  import(  "../../assets/images/crypto/features-img/what-say.svg")))
+const award =    lazy(()=>delayForDemo( import(  "../../assets/images/crypto/features-img/awards-1.webp")))
+
+function delayForDemo(promise) {
+  return new Promise(resolve => {
+    setTimeout(resolve, 2000);
+  }).then(() => promise);
+}
+
 const CryptoIcoLanding = () => {
   
   //meta title
-  document.title="ICO Landing | Skote - React Admin & Dashboard Template";
+  document.title="ICO Landing | User - React Admin & Dashboard Template";
 
   const [imglight, setimglight] = useState(true);
   const [navClass, setnavClass] = useState("");
@@ -42,6 +50,9 @@ const CryptoIcoLanding = () => {
   return (
     <React.Fragment>
       {/* import navbar */}
+      <div>hh</div>
+      
+       <Suspense fallback={<p>Loading.....</p>}>
       <Navbar navClass={navClass} imglight={imglight} />
 
       {/* Hero section */}
@@ -79,6 +90,7 @@ const CryptoIcoLanding = () => {
 
       {/* footer */}
       <Footer />
+       </Suspense>
     </React.Fragment>
   )
 }
